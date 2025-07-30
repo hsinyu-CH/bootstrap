@@ -1,0 +1,22 @@
+body
+    position: relative
+    &::after
+        content: "XS"
+        font-size: 60px
+        font-family: sans-serif
+        font-weight: bold
+        color: #3a4bad
+        position: absolute
+        right: 0
+        top: 0
+
+        @media (width >= 576px)
+            content: "SM"
+        @media (width >= 768px)
+            content: "MD"
+        @media (width >= 992px)
+            content: "LG"
+        @media (width >= 1200px)
+            content: "XL"
+        @media (width >= 1400px)
+            content: "XXL"

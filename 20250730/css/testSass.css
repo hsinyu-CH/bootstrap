@@ -1,9 +1,10 @@
 .block {
-  position: relative;
   width: 100px;
   height: 100px;
-  background-color: #a542a5;
+  margin-bottom: 10px;
   border-radius: 10px;
+  background-color: #a542a5;
+  position: relative;
 }
 .block .circle {
   position: absolute;
@@ -13,4 +14,52 @@
   height: 50px;
   border-radius: 50px;
   background-color: #ff7272;
+}
+
+.block2 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #4b6cff;
+}
+
+.block3 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #44ff8c;
+}
+
+.fz-12 {
+  font-size: 12px;
+}
+
+.fz-14 {
+  font-size: 14px;
+}
+
+.fz-16 {
+  font-size: 16px;
+}
+
+.fz-18 {
+  font-size: 18px;
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-22 {
+  font-size: 22px;
+}
+
+.fz-24 {
+  font-size: 24px;
+}
+
+.fz-26 {
+  font-size: 26px;
 }/*# sourceMappingURL=testSass.css.map */

@@ -1,9 +1,14 @@
-.block
-    position: relative
+@mixin setting($bgc1)
     width: 100px
     height: 100px
-    background-color: #a542a5
+    margin-bottom: 10px
     border-radius: 10px
+    background-color: $bgc1
+
+.block
+    @include setting(#a542a5)
+
+    position: relative
     .circle
         position: absolute
         bottom: 0
@@ -12,3 +17,14 @@
         height: 50px
         border-radius: 50px
         background-color: #ff7272
+
+.block2
+    @include setting(#4b6cff)
+
+.block3
+    @include setting(#44ff8c)
+
+@for $i from 1 through 8
+    $size: 10 + $i * 2
+    .fz-#{$size}
+        font-size: #{$size}px
