@@ -1,3 +1,10 @@
+// @import _mixin // 舊版的載入其他 sass 的方法
+// 新版的用 use
+// 新版的 nth() 要改成使用 list.nth(), 再使用 list 前要 use 進來
+// 這些語法的使用說明會在八月底的 sass 課中講解
+// 在 Sass 下註解時要注意有沒有影響編譯
+@use 'sass:list'
+// 如果沒有 as * 那麼在使用 mixin 時要用 mixin.hnpx() 這樣的方法
 // @import _mixin
 @use "mixin" as*
 
@@ -11,6 +18,8 @@ $fbColor7: #dfe1ee
 $fbColor8: #2b3c63
 $fbColor: #3b5998, #5a6589, #4e69aa, #808cba, #9fa8cb, #bfc4dc, #dfe1ee, #2b3c63
 
+@include hnpx(10)
+@include wnpx(10)
 @include hnpx(25)
 @include wnpx(25)
 @include hnpx(30)
@@ -26,13 +35,16 @@ $fbColor: #3b5998, #5a6589, #4e69aa, #808cba, #9fa8cb, #bfc4dc, #dfe1ee, #2b3c63
 // @include bgc(bg-fb3, $fbColor3)
 // @include bgc(bg-fb4, $fbColor4)
 // @include bgc(bg-fb5, $fbColor5)
+// 原來的 nth() 已全部換成 list.nth()
 @for $i from 1 through 8
-    @include bgc(bg-fb#{$i}, nth($fbColor, $i))
-    @include color(text-fb#{$i}, nth($fbColor, $i))
+    @include bgc(bg-fb#{$i}, list.nth($fbColor, $i))
+    @include color(text-fb#{$i}, list.nth($fbColor, $i))
 
 body
-    background-color: nth($fbColor, 7)
+    background-color: list.nth($fbColor, 7)
     height: 100vh
 
 .h-50px
     height: calc( 100% - 50px )
+.borderColor1
+    border-color: list.nth($fbColor, 3) !important

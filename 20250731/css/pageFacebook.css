@@ -1,3 +1,11 @@
+.h10px {
+  height: 10px;
+}
+
+.w10px {
+  width: 10px;
+}
+
 .h25px {
   height: 25px;
 }
@@ -105,4 +113,8 @@ body {
 
 .h-50px {
   height: calc(100% - 50px);
+}
+
+.borderColor1 {
+  border-color: #4e69aa !important;
 }/*# sourceMappingURL=pageFacebook.css.map */
