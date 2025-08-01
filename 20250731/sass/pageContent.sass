@@ -1,0 +1,42 @@
+@use "mixin" as *
+
+@include hnpx(250)
+@include hnpx(300)
+@include hnpx(150)
+@include wnpx(150)
+
+.min200vh
+    min-height: 200vh
+.top56
+    top: 56px
+.navbar
+    .container
+        .navbar-collapse
+            .search
+                width: 200px
+                transition: all 0.4s
+                &:focus-within
+                    width: 600px
+                input
+                    &::placeholder
+                        color: #3d3d3d
+            .btn-1
+                color: #b7b7b7
+                &:hover
+                    color: #ffffff
+
+.bw2px
+    border-width: 2px !important
+
+aside
+    .container
+        .nav
+            .nav-link
+                &.active
+                    border-bottom: 2px solid #0962f2
+
+header
+    background: url(https://images.pexels.com/photos/262713/pexels-photo-262713.jpeg)
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
